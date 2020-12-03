@@ -50,16 +50,16 @@ function initClient() {
 // Update UI sign in state changes
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
-    authorizeButton.style.display = 'none';
+    authorizeButton.style.display = 'block';
     signoutButton.style.display = 'block';
     content.style.display = 'block';
     videoContainer.style.display = 'block';
     getChannel(defaultChannel);
   } else {
     authorizeButton.style.display = 'block';
-    signoutButton.style.display = 'none';
-    content.style.display = 'none';
-    videoContainer.style.display = 'none';
+    signoutButton.style.display = 'block';
+    content.style.display = 'block';
+    videoContainer.style.display = 'block';
   }
 }
 
@@ -156,3 +156,13 @@ function requestVideoPlaylist(playlistId) {
     }
   });
 }
+
+/*
+  <style>
+    #content,
+    #authorize-button,
+    #signout-button {
+      display: none
+    }
+  </style>
+*/
